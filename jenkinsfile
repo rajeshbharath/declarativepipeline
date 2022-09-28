@@ -12,15 +12,5 @@ pipeline {
                     branch: 'main'
             }
         }
-        stage('build') {
-            steps {
-                sh 'mvn package'
-            }
-        }
-        stage('archiving') {
-            steps {
-                archiveArtifacts '**/*.jar'
-            }
-        }
-    }
+      
 }
